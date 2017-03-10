@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <EditText android:id="@+id/pin_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:maxWidth="300dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/hsdk_dark_text"
+        android:textColorHint="@color/hsdk_dark_text"
+        android:textColorHighlight="@color/hsdk_dark_text"
+        android:inputType="numberPassword"
+        android:hint="@string/hsdk_enter_pin">
+    </EditText>
+</FrameLayout>

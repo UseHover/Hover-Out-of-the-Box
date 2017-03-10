@@ -1,0 +1,7 @@
+#Thu Mar 09 12:04:10 MMT 2017
+base.0=/Users/aung/Repos/Proj-HoverWaveMoney/HoverWaveMoney-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6514e3e802db6af7292e560d409a3164ee375064
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/aung/Repos/Proj-HoverWaveMoney/HoverWaveMoney-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_bc96a0fea69e588046c34fb7b9ce87b777824002/classes.dex
+base.1=/Users/aung/Repos/Proj-HoverWaveMoney/HoverWaveMoney-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_bc96a0fea69e588046c34fb7b9ce87b777824002
+file.0=/Users/aung/Repos/Proj-HoverWaveMoney/HoverWaveMoney-Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6514e3e802db6af7292e560d409a3164ee375064/classes.dex

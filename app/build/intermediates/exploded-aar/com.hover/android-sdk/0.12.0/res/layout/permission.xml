@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flipper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    android:paddingStart="24dp"
+    android:paddingEnd="8dp"
+    android:autoStart="false">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:textSize="18sp"/>
+
+        <ListView android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/op_list_item">
+        </ListView>
+
+        <TextView android:id="@+id/normal_perm_explain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hsdk_permission_explain"
+            android:visibility="gone"/>
+
+        <LinearLayout android:id="@+id/btns_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/neg_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/hsdk_transparent"
+                android:textColor="?attr/colorPrimary"
+                android:text="@string/hsdk_no_thanks"/>
+
+            <Button android:id="@+id/pos_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/hsdk_transparent"
+                android:textColor="?attr/colorPrimary"
+                android:text="@string/hsdk_confirm"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/enter_pin_text"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"/>
+
+        <EditText android:id="@+id/pin_entry"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="16dp"
+                  android:padding="16dp"
+                  android:maxWidth="300dp"
+                  android:gravity="center"
+                  android:layout_gravity="center"
+                  android:inputType="numberPassword"
+                  android:hint="@string/hsdk_enter_pin">
+        </EditText>
+
+        <TextView android:id="@+id/pin_store_explain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text=""/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/neg_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/hsdk_transparent"
+                    android:textColor="@color/hsdk_dark_text"
+                    android:text="@string/hsdk_no_thanks"/>
+
+            <Button android:id="@+id/pos_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/hsdk_transparent"
+                    android:textColor="@color/hsdk_dark_text"
+                    android:enabled="false"
+                    android:text="@string/hsdk_confirm"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ViewFlipper>

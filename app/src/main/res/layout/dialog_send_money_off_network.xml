@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/margin_medium"
+    android:paddingLeft="@dimen/margin_medium"
+    android:paddingRight="@dimen/margin_medium"
+    android:paddingStart="@dimen/margin_medium"
+    android:paddingTop="@dimen/margin_medium_2">
+
+    <ImageView
+        android:id="@+id/iv_project_icon"
+        android:layout_width="@dimen/icon_dimen_regular"
+        android:layout_height="@dimen/icon_dimen_regular"
+        android:src="@drawable/hover_logo" />
+
+    <TextView
+        android:id="@+id/tv_project_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_project_icon"
+        android:layout_alignTop="@id/iv_project_icon"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_toEndOf="@id/iv_project_icon"
+        android:layout_toRightOf="@id/iv_project_icon"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_vertical"
+        android:text="@string/app_name"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_regular_3x" />
+
+    <TextView
+        android:id="@+id/lbl_recipient_phone_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/iv_project_icon"
+        android:layout_alignStart="@id/iv_project_icon"
+        android:layout_below="@id/iv_project_icon"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/lbl_recipient_phone_no"
+        android:textColor="@color/primary_text" />
+
+    <EditText
+        android:id="@+id/et_recipient_phone_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/iv_project_icon"
+        android:layout_alignStart="@id/iv_project_icon"
+        android:layout_below="@id/lbl_recipient_phone_no"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:inputType="phone"
+        android:lineSpacingMultiplier="1.2"
+        android:textColor="@color/primary_text"
+        android:hint="9783499931"
+        />
+
+    <TextView
+        android:id="@+id/lbl_nrc_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/iv_project_icon"
+        android:layout_alignStart="@id/iv_project_icon"
+        android:layout_below="@id/et_recipient_phone_no"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/lbl_nrc_number"
+        android:textColor="@color/primary_text" />
+
+    <EditText
+        android:id="@+id/et_nrc_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/iv_project_icon"
+        android:layout_alignStart="@id/iv_project_icon"
+        android:layout_below="@id/lbl_nrc_number"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:lineSpacingMultiplier="1.2"
+        android:textColor="@color/primary_text"
+        android:hint="12/UKaMa(N)197137"
+        />
+
+    <TextView
+        android:id="@+id/lbl_amount_to_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/iv_project_icon"
+        android:layout_alignStart="@id/iv_project_icon"
+        android:layout_below="@id/et_nrc_number"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/lbl_amount_to_send"
+        android:textColor="@color/primary_text" />
+
+    <EditText
+        android:id="@+id/et_amount_to_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/iv_project_icon"
+        android:layout_alignStart="@id/iv_project_icon"
+        android:layout_below="@id/lbl_amount_to_send"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:inputType="numberDecimal"
+        android:lineSpacingMultiplier="1.2"
+        android:textColor="@color/primary_text"
+        android:hint="5000"
+        />
+
+    <TextView
+        android:id="@+id/lbl_withdrawl_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/iv_project_icon"
+        android:layout_alignStart="@id/iv_project_icon"
+        android:layout_below="@id/et_amount_to_send"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/lbl_withdrawl_code"
+        android:textColor="@color/primary_text" />
+
+    <EditText
+        android:id="@+id/et_withdrawl_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/iv_project_icon"
+        android:layout_alignStart="@id/iv_project_icon"
+        android:layout_below="@id/lbl_withdrawl_code"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:lineSpacingMultiplier="1.2"
+        android:textColor="@color/primary_text"
+        android:hint="123456"
+        />
+
+    <Button
+        android:id="@+id/btn_send_confirm"
+        style="@style/AccentBorderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/et_withdrawl_code"
+        android:layout_margin="@dimen/margin_medium"
+        android:text="@string/btn_send_confirm" />
+
+    <Button
+        android:id="@+id/btn_send_cancel"
+        style="@style/AccentBorderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_withdrawl_code"
+        android:layout_margin="@dimen/margin_medium"
+        android:layout_toLeftOf="@id/btn_send_confirm"
+        android:text="@string/btn_send_cancel" />
+
+</RelativeLayout>
