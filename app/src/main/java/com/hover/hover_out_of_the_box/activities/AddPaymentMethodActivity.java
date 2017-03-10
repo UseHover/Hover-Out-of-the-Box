@@ -1,12 +1,8 @@
 package com.hover.hover_out_of_the_box.activities;
 
-import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -42,15 +38,6 @@ public class AddPaymentMethodActivity extends BaseActivity {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
-        if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            addHoverIntegration();
-        } else {
-            // Explain why you need the permission and ask again
-        }
-    }
-
-    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == Activity.RESULT_OK) {
@@ -82,11 +69,7 @@ public class AddPaymentMethodActivity extends BaseActivity {
 
     @OnClick(R.id.btn_add_payment_method)
     public void onTapAddPaymentMethod(View view) {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PHONE_STATE}, 0);
-        } else {
-            addHoverIntegration();
-        }
+        addHoverIntegration();
     }
 
     /*
