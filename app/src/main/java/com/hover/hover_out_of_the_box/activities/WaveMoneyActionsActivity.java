@@ -14,6 +14,7 @@ import com.hover.hover_out_of_the_box.activities.base.BaseActivity;
 import com.hover.hover_out_of_the_box.dialogs.BuyAirTimeDialog;
 import com.hover.hover_out_of_the_box.dialogs.SendMoneyOffNetworkDialog;
 import com.hover.hover_out_of_the_box.dialogs.SendMoneyOnNetworkDialog;
+import com.hover.hover_out_of_the_box.utils.AppStateUtils;
 import com.hover.hover_out_of_the_box.utils.HoverWMConstants;
 import com.hover.sdk.main.HoverParameters;
 
@@ -71,7 +72,7 @@ public class WaveMoneyActionsActivity extends BaseActivity implements
     public void onTapCheckBalance(View view) {
         Intent intent = new HoverParameters.Builder(this)
                 .request(HoverWMConstants.WAVE_MONEY_ACTION_CHECK_BALANCE)
-                .from(HoverWMConstants.WAVE_MONEY_SERVICE_ID)
+                .from(AppStateUtils.getServiceId(this))
                 .buildIntent();
         startActivityForResult(intent, RC_CHECK_BALANCE);
     }
@@ -110,7 +111,7 @@ public class WaveMoneyActionsActivity extends BaseActivity implements
                 .request(HoverWMConstants.WAVE_MONEY_ACTION_SEND_MONEY_ON_NETWORK)
                 .amount(amountToSend, HoverWMConstants.MM_CURRENCY_KYAT)
                 .to(recipientPhoneNo)
-                .from(HoverWMConstants.WAVE_MONEY_SERVICE_ID)
+                .from(AppStateUtils.getServiceId(this))
                 .buildIntent();
                 */
 
@@ -118,7 +119,7 @@ public class WaveMoneyActionsActivity extends BaseActivity implements
                 .request(HoverWMConstants.WAVE_MONEY_ACTION_SEND_MONEY_ON_NETWORK,
                         amountToSend, HoverWMConstants.MM_CURRENCY_KYAT,
                         recipientPhoneNo)
-                .from(HoverWMConstants.WAVE_MONEY_SERVICE_ID)
+                .from(AppStateUtils.getServiceId(this))
                 .buildIntent();
 
         startActivityForResult(intent, RC_SEND_MONEY_ON_NETWORK);
@@ -130,7 +131,7 @@ public class WaveMoneyActionsActivity extends BaseActivity implements
                 .request(HoverWMConstants.WAVE_MONEY_ACTION_SEND_MONEY_OFF_NETWORK,
                         amountToSend, HoverWMConstants.MM_CURRENCY_KYAT,
                         recipientPhoneNo)
-                .from(HoverWMConstants.WAVE_MONEY_SERVICE_ID)
+                .from(AppStateUtils.getServiceId(this))
                 .extra(HoverWMConstants.RECEPIENT_NRC, nrcNumber)
                 .extra(HoverWMConstants.WITHDRAWAL_CODE, withdrawalCode)
                 .buildIntent();
@@ -144,7 +145,7 @@ public class WaveMoneyActionsActivity extends BaseActivity implements
                 .request(HoverWMConstants.WAVE_MONEY_ACTION_BUY_AIRTIME,
                         amountToBuy, HoverWMConstants.MM_CURRENCY_KYAT,
                         recipientPhoneNo)
-                .from(HoverWMConstants.WAVE_MONEY_SERVICE_ID)
+                .from(AppStateUtils.getServiceId(this))
                 .buildIntent();
 
         startActivityForResult(intent, RC_BUY_AIRTIME);

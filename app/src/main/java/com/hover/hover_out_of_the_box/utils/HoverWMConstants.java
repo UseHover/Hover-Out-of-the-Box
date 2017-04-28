@@ -16,5 +16,5 @@ public class HoverWMConstants {
     //public static final String WAVE_MONEY_ACTION_SEND_MONEY_ON_NETWORK = "send_money_on_network";
     public static final String WAVE_MONEY_ACTION_SEND_MONEY_ON_NETWORK = "send";
     public static final String WAVE_MONEY_ACTION_SEND_MONEY_OFF_NETWORK = "send_money_off_network";
-    public static final String WAVE_MONEY_ACTION_BUY_AIRTIME = "buy_airtime";
+    public static final String WAVE_MONEY_ACTION_BUY_AIRTIME = "buy_airtime_other";
 }

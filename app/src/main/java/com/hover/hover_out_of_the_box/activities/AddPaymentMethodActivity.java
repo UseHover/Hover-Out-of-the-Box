@@ -107,7 +107,7 @@ public class AddPaymentMethodActivity extends BaseActivity {
         if (NetworkUtils.getInstance().isOnline()) {
             //HoverIntegration.add(HoverWMConstants.WAVE_MONEY_SERVICE_ID, Permission.NORMAL, this, this);
             Intent integrationIntent = new Intent(this, HoverIntegrationActivity.class);
-            integrationIntent.putExtra(HoverIntegrationActivity.SERVICE_IDS, new int[] { HoverWMConstants.WAVE_MONEY_SERVICE_ID });
+            integrationIntent.putExtra(HoverIntegrationActivity.SERVICE_IDS, new int[] { HoverWMConstants.WAVE_MONEY_SERVICE_ID, 15, 19, 8, 21, 6, 17, 3, 4, 5, 13 });
             integrationIntent.putExtra(HoverIntegrationActivity.PERM_LEVEL, Permission.NORMAL);
             startActivityForResult(integrationIntent, RC_INTEGRATE_REQUEST);
         } else {
