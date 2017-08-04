@@ -56,4 +56,7 @@ public class AppStateUtils {
     public static int getServiceId(Context c) {
         return c.getSharedPreferences(HWM_SHARED_PREFERENCE, Context.MODE_PRIVATE).getInt(PREF_KEY_SPI_SERVICE_ID, 0);
     }
+    public static String getServiceName(Context c) {
+        return c.getSharedPreferences(HWM_SHARED_PREFERENCE, Context.MODE_PRIVATE).getString(PREF_KEY_SPI_SERVICE_NAME, "");
+    }
 }

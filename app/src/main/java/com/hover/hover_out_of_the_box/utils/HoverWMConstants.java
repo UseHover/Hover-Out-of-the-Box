@@ -12,9 +12,9 @@ public class HoverWMConstants {
     public static final String RECEPIENT_NRC = "recipient_nrc";
     public static final String WITHDRAWAL_CODE = "withdrawal_code";
 
-    public static final String WAVE_MONEY_ACTION_CHECK_BALANCE = "balance";
+    public static final String WAVE_MONEY_ACTION_CHECK_BALANCE = "check_balance";
     //public static final String WAVE_MONEY_ACTION_SEND_MONEY_ON_NETWORK = "send_money_on_network";
-    public static final String WAVE_MONEY_ACTION_SEND_MONEY_ON_NETWORK = "send";
+    public static final String WAVE_MONEY_ACTION_SEND_MONEY_ON_NETWORK = "send_money";
     public static final String WAVE_MONEY_ACTION_SEND_MONEY_OFF_NETWORK = "send_money_off_network";
     public static final String WAVE_MONEY_ACTION_BUY_AIRTIME = "buy_airtime_other";
 }

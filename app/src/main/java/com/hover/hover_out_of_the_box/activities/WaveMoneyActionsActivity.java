@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import com.hover.hover_out_of_the_box.HoverWMApp;
 import com.hover.hover_out_of_the_box.R;
@@ -48,6 +49,7 @@ public class WaveMoneyActionsActivity extends BaseActivity implements
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wave_money_actions);
+        ((TextView) findViewById(R.id.service_name)).setText(AppStateUtils.getServiceName(this));
         ButterKnife.bind(this, this);
     }
 

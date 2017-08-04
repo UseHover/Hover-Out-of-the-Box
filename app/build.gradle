@@ -6,7 +6,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'com.android.tools.build:gradle:2.3.3'
     }
 }
 
@@ -46,7 +46,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
 
-    compile('com.hover:android-sdk:0.13.0') { transitive = true; }
+    releaseCompile('com.hover:android-sdk:0.13.13') { transitive = true; }
+    debugCompile(project(':android-sdk-debug')) { transitive = true; }
 
     compile 'com.jakewharton:butterknife:8.1.0'
     apt 'com.jakewharton:butterknife-compiler:8.1.0'
