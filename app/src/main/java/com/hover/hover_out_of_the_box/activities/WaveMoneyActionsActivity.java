@@ -62,9 +62,9 @@ public class WaveMoneyActionsActivity extends BaseActivity implements
             Log.d(HoverWMApp.TAG, data.getStringExtra("response_message") + " contains the message from the operator");
             Log.d(HoverWMApp.TAG, data.getLongExtra("transaction_id", -1) + " contains the id of the pending transaction");
         } else if (resultCode == Activity.RESULT_CANCELED) {
-            getPromptDialog().setUpPrompt(data.getStringExtra("result"));
+            getPromptDialog().setUpPrompt(data.getStringExtra("error"));
 
-            Log.d(HoverWMApp.TAG, data.getStringExtra("result") + " contains the error that occured");
+            Log.d(HoverWMApp.TAG, data.getStringExtra("error") + " contains the error that occured");
             if (data.hasExtra("transaction_id")) // If a request was actually made to the Mobile Money Operator
                 Log.d(HoverWMApp.TAG, data.getStringExtra("transaction_id") + " contains the id of the failed transaction");
         }
